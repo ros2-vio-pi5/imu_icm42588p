@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imu_icm42588p"
+version = "0.0.0"
+authors = [
+  { name = "ericm977", email = "you@example.com" },
+]
+description = "Explore and validate the feature set of the ICM-42688-P 6-axis MEMS motion tracking device."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: Linux",
+]
+dependencies = [
+]
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]  # ignore line length linting
+target-version = "py38"

@@ -1,0 +1,63 @@
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# jupyter
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+pipenv.lock
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# virtualenv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# os files
+.DS_Store
+Thumbs.db
