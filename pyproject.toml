@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "imu_icm42588p"
-version = "0.0.0"
+version = "0.1.0"
 authors = [
   { name = "ericm977", email = "you@example.com" },
 ]
