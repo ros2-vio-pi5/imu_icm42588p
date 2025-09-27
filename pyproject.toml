@@ -8,7 +8,7 @@ version = "0.0.0"
 authors = [
   { name = "ericm977", email = "you@example.com" },
 ]
-description = "Explore and validate the feature set of the ICM-42688-P 6-axis MEMS motion tracking device."
+description = "A library providing low-level register definitions, communication, and interface modules for the ICM-42688-P 6-axis MEMS motion tracking device."
 readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.8"
 license = "MIT"
@@ -18,6 +18,12 @@ classifiers = [
   "Operating System :: POSIX :: Linux",
 ]
 dependencies = [
+  "spidev~=3.8"
+]
+
+[project.optional-dependencies]
+examples = [
+  "click~=3.8.0",
 ]
 
 [tool.ruff]

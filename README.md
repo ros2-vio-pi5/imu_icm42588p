@@ -1,6 +1,8 @@
 # imu_icm42688p
 
-A Python package to explore and validate the feature set of the ICM-42688-P 6-axis MEMS motion tracking device.
+A Python library providing low-level register definitions, communication, and interface modules for the ICM-42688-P 6-axis MEMS motion tracking device.
+
+Example scripts demonstrating usage, timestamp validation, and configuration scenarios are provided separately in the `examples/` folder.
 
 ## Linting
 
