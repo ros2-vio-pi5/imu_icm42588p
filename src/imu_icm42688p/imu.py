@@ -1,5 +1,7 @@
+import time
+
 from .comm import Comm
-from .registers import REG_BANK_SEL
+from .registers import DEVICE_CONFIG, INT_STATUS, REG_BANK_SEL
 
 
 class Imu:
@@ -35,3 +37,17 @@ class Imu:
         current_val = self.read(reg)[0]
         new_val = (current_val & ~mask) | (value & mask)
         self.write(reg, new_val)
+
+    def reset(self):
+        soft_reset_bit = DEVICE_CONFIG.get_bit("SOFT_RESET_CONFIG").mask
+        self.write_masked(DEVICE_CONFIG, soft_reset_bit, soft_reset_bit)
+
+    def wait_for_reset_done(self, timeout=1.0):
+        start = time.time()
+        reset_done_bit = INT_STATUS.get_bit("RESET_DONE_INT").mask
+        while time.time() - start < timeout:
+            int_status = self.read(INT_STATUS)[0]
+            if int_status & reset_done_bit:
+                return True
+            time.sleep(0.01)
+        return False
